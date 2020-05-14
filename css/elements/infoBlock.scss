@@ -1,0 +1,23 @@
+.infoBlock {
+    margin-bottom: 115px;
+    .images {
+        padding-right: 0px;
+        position: relative;
+        margin-bottom: 100px;
+        .back {
+            width: 75%;
+        }
+        .front {
+            border: 10px solid white;
+            position: absolute;
+            width: 60%;
+            right: 0;
+            bottom: -100px;
+        }
+    }
+    .info {
+        padding-left: 45px;
+        font-size: 18px;
+        color: $text-on-white;
+    }
+}
