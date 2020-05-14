@@ -1,0 +1,53 @@
+#contacntsPage {
+    padding: 0 105px 130px 105px;
+    .leftBlock {
+        padding: 0 35px 0 0;
+        > div {
+            padding-left: 40px;
+        }
+        .yellowButton {
+            width: 215px;
+        }
+    }
+    .rightBlock {
+        padding: 0 0 0 30px;
+        color: $blue-light;
+        font-size: 18px;
+        line-height: 1.5;
+        .innerBlock {
+            $verticalPadding: 62px;
+            $sidePadding: 40px;
+            background-color: $blue;
+            padding: 0 $sidePadding $verticalPadding $sidePadding;
+            position: relative;
+            &:before {
+                padding: 0;
+                content:'';
+                display:block;
+                height:$verticalPadding;
+                background-color: $blue;
+                position:absolute;
+                width: 100%;
+                margin-top: -$verticalPadding;
+                margin-left: -$sidePadding;
+            }
+            > div {
+                padding-left: 30px;
+                margin-bottom: 50px;
+                &:last-child {
+                    margin-bottom: $verticalPadding - 50px;
+                }
+            }
+            .simpleTitle {
+                margin-bottom: 20px;
+                color: white;
+            }
+            a {
+                color: $blue-light;
+                &.mail {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
