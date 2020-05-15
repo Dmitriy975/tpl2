@@ -1,0 +1,2 @@
+- Команда процессинга в css: `sass --watch css/styles.scss:css/style.css`
+- Ссылка на slick-слайдер https://kenwheeler.github.io/slick/
