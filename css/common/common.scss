@@ -1,11 +1,12 @@
+@font-face {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    src: url("/css/pt_sans.ttf") format("ttf");
+}
+
 html,
 body {
-    @font-face {
-        font-family: "PT Sans", sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        src: url("/css/pt_sans.ttf") format("ttf");
-    }
     height: 100%;
     line-height: 1.5;
 }
