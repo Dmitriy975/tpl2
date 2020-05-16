@@ -1,2 +1,3 @@
-- Команда процессинга в css: `sass --watch css/styles.scss:css/styles.css`
-- Ссылка на slick-слайдер https://kenwheeler.github.io/slick/
+- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ css: `sass --watch css/styles.scss:css/styles.css`
+- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ slick-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ https://kenwheeler.github.io/slick/
+- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ animate.css https://animate.style/#javascript

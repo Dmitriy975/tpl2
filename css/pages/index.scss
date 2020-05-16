@@ -1,3 +1,182 @@
 #mainSlider {
     margin-bottom: 140px;
+    .slide {
+        height:630px;
+        background:center center no-repeat;
+        &[aria-hidden="false"]:nth-child(3n + 1) {
+            .simpleTitle {
+                animation: fadeInRight;
+            }
+            .yellowButton {
+                animation: zoomInRight;
+            }
+        }
+        &[aria-hidden="false"]:nth-child(3n + 2) {
+            .simpleTitle {
+                animation: rollIn;
+                &.text-2 {
+                    -webkit-animation-duration:1.2s !important;
+                    animation-duration:1.2s !important;
+                }
+                &.text-2 {
+                    -webkit-animation-duration:1.4s !important;
+                    animation-duration:1.4s !important;
+                }
+                &.text-3 {
+                    -webkit-animation-duration:1.6s !important;
+                    animation-duration:1.6s !important;
+                }   
+            }
+            .yellowButton {
+                animation: rotateInUpRight;
+                -webkit-animation-duration:1.8s !important;
+                animation-duration:1.8s !important;
+            }
+        }
+        &[aria-hidden="false"]:nth-child(3n + 3) {
+            .simpleTitle {
+                animation: backInLeft;
+            }
+            .yellowButton {
+                animation: flipInY;
+            }
+        } 
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.2);
+            z-index: 2;
+        }
+        &[aria-hidden="false"]{
+            .simpleTitle, .yellowButton {
+                animation-play-state: initial;
+                -webkit-animation-duration:.8s !important;
+                animation-duration:.8s !important;
+                &.text-2 {
+                    -webkit-animation-duration:1s !important;
+                    animation-duration:1s !important;
+                }
+                &.text-3 {
+                    -webkit-animation-duration:1.2s !important;
+                    animation-duration:1.2s !important;
+                }    
+            }
+            .yellowButton {
+                animation-duration:1.4s !important;
+            }
+        }
+        .container {
+            z-index: 3;
+            @include centre(y);
+            $left-margin: 80px;
+            .simpleTitle { 
+                // &:first-child {
+                //     padding-top: 5px;
+                // }               
+                // &:last-child {
+                //     padding-bottom: 10px;
+                // }               
+                padding-left: $left-margin;
+                color: white;
+                padding-top: 0;
+                padding-bottom: 0;
+                line-height: 1.2 !important;
+                margin-bottom: 0px;
+                &.text-1 {
+                    position: relative;
+                    font-weight: bold;
+                    font-size: 48px;
+                }
+                &.text-2 {
+                    position: relative;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                &.text-3 {
+                    position: relative;
+                    font-size: 30px;
+                }
+            }
+            .yellowButton {
+                font-size: 24px;
+                padding-left: 45px;
+                padding-right: 45px;
+                height: 65px;
+                width: auto;
+                margin-left: $left-margin;
+                margin-top: 20px;
+            }
+        }
+    }
+    .slick-arrow {
+        display: none !important;
+    }
+    .slick-list {
+        position: relative;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 50px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            position: relative;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin: 0 40px;
+            padding: 0;
+            cursor: pointer;
+            &.slick-active button {
+                background-color: $slider-dots-active;
+            }
+            button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 14px;
+                height: 14px;
+                padding: 5px;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: none;
+                background: transparent;
+                border-radius:50%;
+                transition: background-color 0.5s ease;
+                background-color: $slider-dots;
+                box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+                &:hover, &:focus {
+                    outline: none;
+                    background: $slider-dots-active;
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+                &:before {
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 14px;
+                    height: 14px;
+                    content: '•';
+                    text-align: center;
+                    opacity: .25;
+                    color: black;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+    }
 }
