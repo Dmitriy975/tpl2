@@ -4,6 +4,9 @@
         padding-right: 0px;
         position: relative;
         margin-bottom: 100px;
+        > div {
+            position: relative;
+        }
         .back {
             width: 75%;
         }

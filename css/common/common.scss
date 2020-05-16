@@ -75,6 +75,7 @@ a {
     font-size: 18px;
     font-weight: bold;
     height: 45px;
+    transition: background-color 0.3s ease;
     background-color: $yellow;
     color: $blue;
     cursor: pointer;
