@@ -52,8 +52,13 @@
             width: 133px;
             height: 97px;
             margin-left: 35px;
+            position: relative;
             img {
-                vertical-align: middle;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%);
             }
         }
     }
