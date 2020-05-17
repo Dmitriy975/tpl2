@@ -1,0 +1,174 @@
+#aboutPage {
+    text-align: center;
+    div.oils {
+        background-color: $blue;
+        color: $text-on-dark;
+        height: 606px;
+        margin: 0 auto;
+
+
+        .upperTitle {
+            padding-top: 134px;
+        }
+        .middleTitle {
+            padding-top: 21px;
+        }
+        .bottomTitle {
+            color: $text-blue-gray;
+            padding-top: 40px;
+        }
+
+        .oils_slick {
+            padding-top: 40px;
+            width: 1140px;
+            margin: 0 auto;
+        }
+        .slickButtons {
+            margin-top: 47px;
+            button {
+                width: 56px;
+                height: 56px;
+                border: 3px solid $text-on-dark;
+                background: get-icon('arrow-down', $text-on-dark, 10) center center no-repeat;
+                &:hover {
+                    transition: all 0.3s ease;
+                    border: 3px solid $yellow;
+                    background: get-icon('arrow-down', $yellow, 10) center center no-repeat;
+                }
+                &.slickLeft {
+                    transform: rotate(90deg);
+                }
+                &.slickRight {
+                    margin-left: 28px;
+                    transform: rotate(-90deg);
+                }
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+        .oil_card {
+            background-color: white;
+            width: 133px;
+            height: 97px;
+            margin-left: 35px;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    div.reviewsBlock {
+        height: 585px;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: left;
+        .reviewHeader {
+            display: inline-block;
+            width: 390px;
+            padding-right: 35px;
+            padding-bottom: 50px;
+            font-size: 18px;
+            vertical-align: top;
+            div:first-child {
+                font-size: 120px;
+                font-weight: bold;
+                letter-spacing: -5px;
+                color: $yellow;
+            }
+            h3 {
+                font-size: 30px;
+            }
+            p:last-child {
+                font-size: 18px;
+                color: $text-on-white;
+            }
+            .reviewsDots {
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    li {
+                        float: left;
+                        width: 30px;
+                        height: 5px;
+                        margin-left: 15px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &.slick-active > button {
+                            transition: all 0.3s ease;
+                            background-color: $yellow;
+                        }
+                        button {
+                            background-color: $blue;
+                            border: none;
+                            width: inherit;
+                            height: inherit;
+                            &:focus {
+                                outline: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reviews {
+            padding-top: 105px;
+            display: inline-block;
+            width: 776px;
+            .reviewSlick {
+                .reviewItem {
+                    background-color: $review-gray-background;
+                    padding: 50px 29px 50px 40px;
+                    display: inline-block;
+                    width: 363px;
+                    height: 363px;
+                    margin-left: 25px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:focus {
+                        outline: 0;
+                    }
+                    > p {
+                        margin-bottom: 35px;
+                    }
+                    .circular--landscape {
+                        width: 65px;
+                        height: 65px;
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        display: inline-block;
+                        img {
+                            display: inline;
+                            margin: 0 auto;
+                        }
+                    }
+                    .authorBlock {
+                        display: inline-block;
+                        padding-left: 29px;
+                        vertical-align: top;
+                        font-size: 18px;
+                        p {
+                            margin-bottom: 0;
+                        }
+                        .rating {
+                            div {
+                                display: inline-block;
+                                width: 16px;
+                                height: 16px;
+                                background: get-icon('star', $gray, 16) center center no-repeat;
+                                &.filled {
+                                    background: get-icon('star', $yellow, 16) center center no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
