@@ -47,7 +47,7 @@ header {
                         display:block;
                         width:14px;
                         height:9px;
-                        background:url('data:image/svg+xml;utf8,#{$arrow-down}') center center no-repeat;
+                        background:get-icon('arrow-down', $blue, 14) center center no-repeat;
                         position:absolute;
                         top:50%;
                         margin-top:-3px;
