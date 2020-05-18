@@ -11,17 +11,34 @@
             padding-top: 134px;
         }
         .middleTitle {
-            padding-top: 21px;
+            padding-top: 30px;
         }
         .bottomTitle {
+            padding-top: 30px;
+            font-size: 18px;
             color: $text-blue-gray;
-            padding-top: 40px;
         }
 
         .oils_slick {
             padding-top: 40px;
-            width: 1140px;
             margin: 0 auto;
+            .slick-slide {
+                background-color: white;
+                width: 133px;
+                height: 97px;
+                margin-left: 35px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -ms-transform: translateY(-50%) translateX(-50%);
+                    transform: translateY(-50%) translateX(-50%);
+                }
+            }
         }
         .slickButtons {
             margin-top: 47px;
@@ -45,20 +62,6 @@
                 &:focus {
                     outline: 0;
                 }
-            }
-        }
-        .oil_card {
-            background-color: white;
-            width: 133px;
-            height: 97px;
-            margin-left: 35px;
-            position: relative;
-            img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -ms-transform: translateY(-50%) translateX(-50%);
-                transform: translateY(-50%) translateX(-50%);
             }
         }
     }
@@ -124,7 +127,7 @@
             display: inline-block;
             width: 776px;
             .reviewSlick {
-                .reviewItem {
+                .slick-slide {
                     background-color: $review-gray-background;
                     padding: 50px 29px 50px 40px;
                     display: inline-block;
