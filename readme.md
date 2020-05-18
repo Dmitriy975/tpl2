@@ -1,3 +1,3 @@
-- ������� ����������� � css: `sass --watch css/styles.scss:css/styles.css`
-- ������ �� slick-������� https://kenwheeler.github.io/slick/
-- ������ �� animate.css https://animate.style/#javascript
+- Препроцессинг css: `sass --watch css/styles.scss:css/styles.css`
+- Slick-слайдер https://kenwheeler.github.io/slick/
+- Гайд по animate.css https://animate.style/#javascript
