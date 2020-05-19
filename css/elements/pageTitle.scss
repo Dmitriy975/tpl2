@@ -1,10 +1,9 @@
 #pageTitle {
     line-height: 1;
-    .bgImage::after {
-        content:'';
+    .bgImage {
         display:block;
         height:280px;
-        background:var(--this-bg-var) center center no-repeat;
+        background:center center no-repeat;
         position:absolute;
         width: 100%;
     }
