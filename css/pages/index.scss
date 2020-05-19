@@ -180,6 +180,7 @@
     position: relative;
     color: $blue-light;
     margin-bottom: 230px;
+    flex: 1 0 auto;
     .leftBlock {
         padding-right: 0px;
         .simpleTitle {
@@ -188,15 +189,14 @@
         .text {
             padding-bottom: 80px;
         }
-        .bgImage {
+        .bgImageWrapper {
             position: relative;
-            min-height: 300px;
-            &:before,  &:after {
+            .bgImage,  &:after {
                 content: '';
                 display: block;
                 width: 1000px;
                 height: 100%;
-                background: right bottom var(--this-bg-var);
+                background: right center;
                 display: flex;
                 position: absolute;
                 right: 0;
@@ -307,6 +307,7 @@
             }
             .button {
                 padding-left: 0;
+                display: flex;
                 .yellowButton {
                     @include centre(y);
                     text-transform: none;
