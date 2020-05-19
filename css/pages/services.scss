@@ -1,0 +1,144 @@
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+.servicesItems {
+  .col {
+    height: 500px;
+    a {
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+      div {
+        &.content {
+          padding-left: 40px;
+          height: 160px;
+          overflow-y: hidden;
+        }
+        div:first-child {
+          padding: 10px 5px 5px 0;
+          line-height: 1;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        &:last-child {
+          padding-top: 5px;
+          span:first-child {
+            font-size: 18px;
+            font-weight: 700;
+            color: $blue;
+            padding-left: 40px;
+            text-transform: uppercase;
+          }
+          span.iconRight {
+            vertical-align: text-top;
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            background: get-icon('arrow-down', $blue, 16) center center no-repeat;
+            transform: rotate(-90deg);
+          }
+        }
+      }
+      &:hover {
+        transition: all .3s ease;
+        div {
+          transition: inherit;
+          background-color: $blue;
+          div {
+            transition: inherit;
+            &:first-child {
+              color: $text-on-dark;
+            }
+            &:nth-child(2) {
+              color: $text-blue-gray;
+            }
+          }
+          &:last-child {
+            span:first-child {
+              transition: inherit;
+              color: $yellow;
+              text-decoration-line: underline;
+            }
+            span.iconRight {
+              transition: inherit;
+              background: get-icon('arrow-down', $yellow, 16) center center no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.servicesBottomBlock {
+  position: relative;
+  margin: 200px 0 120px 0;
+  > div {
+    padding-left: 0;
+    margin-left: 12%;
+    height: 780px;
+    background-color: $blue;
+    > div {
+      margin-left: -12%;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      img {
+        height: auto;
+        width: 37.5%;
+        max-width: 720px;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .servicesBottomContent {
+        display: inline-block;
+        width: calc(62.5% - 2.9%);
+        min-width: 440px;
+        vertical-align: top;
+        margin-left: calc(37.5% + 2.9%);
+        font-size: 18px;
+        color: $text-on-dark;
+        max-height: 780px;
+        .simpleTitle {
+          color: inherit;
+          margin-bottom: 4.6%;
+        }
+        .serviceContentText {
+          max-width: 550px;
+          color: $text-blue-gray;
+        }
+        .serviceContentPhoneText {
+          margin-top: 3.7%;
+          line-height: 1;
+          text-transform: uppercase;
+          color: inherit;
+        }
+        .serviceContentPhone {
+          margin-top: 1.3%;
+          a {
+            color: inherit;
+          }
+        }
+        .yellowButton {
+          margin-top: 4%;
+          max-width: 245px;
+        }
+      }
+    }
+  }
+
+}
