@@ -179,6 +179,7 @@
     padding: 110px 0 0 0;
     position: relative;
     color: $blue-light;
+    margin-bottom: 230px;
     .leftBlock {
         padding-right: 0px;
         .simpleTitle {
@@ -323,5 +324,144 @@
         height: 80px;
         background: $background;
         margin-top: -80px;
+    }
+}
+#mainGalery {
+    columns: 2 auto;
+    column-gap: 25px;
+    margin-bottom: 40px;
+    .item {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 25px;
+        &:hover .info{
+            animation-duration: 0.7s !important;
+            // animation: animate__flipInX;
+            // display: block;
+        }
+        img {
+            width: 100%;
+        }
+        .info {
+            position: absolute;
+            display: none;
+            width: 100%;
+            height: 100%;
+            color: $text-on-dark;
+            padding: 45px 50px 45px 50px;
+            text-align: center;
+            animation-duration: 0.5s !important;
+            &.animate__animated {
+                display: block;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+            > div {
+                @include centre(y);
+                .title {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                .descr {
+                    font-size: 18px;
+                }
+            }
+            &:before {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                @include background-opacity($blue, 0.5);
+            }
+            &:after {
+                display: block;
+                content: '';
+                border: 3px solid $yellow;
+                // width: 100%;
+                // height: 100%;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                right: 30px;
+                bottom: 30px;
+            }
+        }
+        &.end {
+            min-height: 100px;
+            width: 100%;
+            > div {
+                background-color: $blue;
+                width: 100%;
+                height: 100%;
+            }
+            a {
+                width: 100%;
+                height: 100%;
+                color: $text-on-dark;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: underline;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:after {
+                    display: inline-block;
+                    content: get-icon('arrow-down', $text-on-dark, 17);
+                    transform: rotate(270deg);
+                    margin-left: 14px;
+                }
+            }
+        }
+        &.start {
+            .text {
+                font-size: 15px;
+                color: $text-on-white;
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
+@-webkit-keyframes flipInX{
+    0%{
+        -webkit-transform:perspective(400px) rotateX(90deg);
+        transform:perspective(400px) rotateX(90deg);
+        -webkit-animation-timing-function:ease-in;
+        animation-timing-function:ease-in;
+        opacity:0
+    }
+    40% {
+        -webkit-transform:perspective(400px);
+        transform:perspective(400px);
+        opacity:1;
+    } to{
+        -webkit-transform:perspective(400px);
+        transform:perspective(400px);
+        opacity:1;
+    }
+}
+@keyframes flipInX{
+    0%{
+        -webkit-transform:perspective(800px) rotateX(90deg);
+        transform:perspective(800px) rotateX(90deg);
+        -webkit-animation-timing-function:ease-in;
+        animation-timing-function:ease-in;
+        opacity:0;
+    }
+    40% {
+        -webkit-transform:perspective(800px);
+        transform:perspective(800px);
+        opacity:1;
+    }to{
+        -webkit-transform:perspective(800px);
+        transform:perspective(800px);
+        opacity:1;
     }
 }
