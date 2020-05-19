@@ -7,11 +7,13 @@ header {
             height: 55px;
             > div {
                 padding: 0;
+                position: relative;
                 > div, > ul {
                     @include centre(y);
                 }
             }
             .yellowButton {
+                display: flex;
                 margin-top: -1px;
             }
         }
@@ -42,7 +44,7 @@ header {
                     &.parent {
                         padding-right: 25px;
                     }
-                    &.parent::after{
+                    &.parent::after {
                         content:'';
                         display:block;
                         width:14px;
