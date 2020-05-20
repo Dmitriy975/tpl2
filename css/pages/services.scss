@@ -55,6 +55,7 @@ a.nostyle:visited {
           transition: inherit;
           background-color: $blue;
           div {
+            background-color: transparent;
             transition: inherit;
             &:first-child {
               color: $text-on-dark;
