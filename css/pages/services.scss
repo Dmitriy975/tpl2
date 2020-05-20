@@ -15,7 +15,7 @@ a.nostyle:visited {
     height: 500px;
     position: relative;
     margin-bottom: 15px;
-    a {
+    a > div {
       cursor: pointer;
       img {
         width: 100%;
@@ -54,8 +54,10 @@ a.nostyle:visited {
     }
     &:hover {
       transition: all .3s ease;
-      background-color: $blue;
-      a {
+      a > div {
+        transition: inherit;
+        height: 100%;
+        background-color: $blue;
         div {
           transition: inherit;
           div {
