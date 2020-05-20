@@ -11,6 +11,7 @@ a.nostyle:visited {
 }
 
 .servicesItems {
+  flex: 1 0 auto;
   .col {
     height: 500px;
     position: relative;
@@ -89,21 +90,12 @@ a.nostyle:visited {
 .servicesBottomBlock {
   position: relative;
   margin: 200px 0 120px 0;
+  background: linear-gradient(to right, $background 50%, $blue 50%);
+  flex: 1 0 auto;
   .container {
     padding: 115px 0;
     background-color: $blue;
     position: relative;
-    &:after {
-      display: block;
-      content: '';
-      background-color: $blue;
-      top: 0;
-      left: 100%;
-      position: absolute;
-      height: 100%;
-      width: 1000px;
-      right: 0;
-    }
     .imgWrapper {
       padding-right: 0;
       position: relative;
@@ -114,6 +106,17 @@ a.nostyle:visited {
         height: 100%;
         right: 0;
         text-align: right;
+        display: flex;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,.2);
+          z-index: 2;
+        }
         img {
           @include centre(y);
         }
