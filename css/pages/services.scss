@@ -83,60 +83,64 @@ a.nostyle:visited {
 .servicesBottomBlock {
   position: relative;
   margin: 200px 0 120px 0;
-  > div {
-    padding-left: 0;
-    margin-left: 12%;
-    height: 780px;
+  .container {
+    padding: 115px 0;
     background-color: $blue;
-    > div {
-      margin-left: -12%;
+    position: relative;
+    &:after {
+      display: block;
+      content: '';
+      background-color: $blue;
+      top: 0;
+      left: 100%;
       position: absolute;
-      width: 100%;
-      top: 50%;
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      img {
-        height: auto;
-        width: 37.5%;
-        max-width: 720px;
+      height: 100%;
+      width: 1000px;
+      right: 0;
+    }
+    .imgWrapper {
+      padding-right: 0;
+      position: relative;
+      .img {
+        overflow: hidden;
         position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        width: 1000px;
+        height: 100%;
+        right: 0;
+        text-align: right;
+        img {
+          @include centre(y);
+        }
       }
-      .servicesBottomContent {
-        display: inline-block;
-        width: calc(62.5% - 2.9%);
-        min-width: 440px;
-        vertical-align: top;
-        margin-left: calc(37.5% + 2.9%);
-        font-size: 18px;
-        color: $text-on-dark;
-        max-height: 780px;
-        .simpleTitle {
+    }
+    .servicesBottomContent {
+      padding-left: 60px;
+      color: $text-on-dark;
+      font-size: 18px;
+      .simpleTitle {
+        color: inherit;
+        margin-bottom: 50px;
+        padding: 15px 0 15px 40px;
+      }
+      .serviceContentText {
+        color: $text-blue-gray;
+      }
+      .serviceContentPhoneText {
+        margin-top: 45px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: inherit;
+      }
+      .serviceContentPhone {
+        margin-top: 18px;
+        a {
           color: inherit;
-          margin-bottom: 4.6%;
+          font-size: 24px;
         }
-        .serviceContentText {
-          max-width: 550px;
-          color: $text-blue-gray;
-        }
-        .serviceContentPhoneText {
-          margin-top: 3.7%;
-          line-height: 1;
-          text-transform: uppercase;
-          color: inherit;
-        }
-        .serviceContentPhone {
-          margin-top: 1.3%;
-          a {
-            color: inherit;
-          }
-        }
-        .yellowButton {
-          margin-top: 4%;
-          max-width: 245px;
-        }
+      }
+      .yellowButton {
+        margin-top: 40px;
+        max-width: 245px;
       }
     }
   }

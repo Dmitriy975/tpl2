@@ -3,6 +3,10 @@
     .slide {
         height:630px;
         background:center center no-repeat;
+        position: relative;
+        img {
+            @include centre('both')
+        }
         &[aria-hidden="false"]:nth-child(3n + 1) {
             .simpleTitle {
                 animation: fadeInRight;
@@ -200,6 +204,11 @@
                 display: flex;
                 position: absolute;
                 right: 0;
+                overflow: hidden;
+                text-align: right;
+                img {
+                    @include centre(y);
+                }
             }
             &:after {
                 background: rgba(0,0,0,.2);
