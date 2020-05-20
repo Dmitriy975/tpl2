@@ -13,6 +13,8 @@ a.nostyle:visited {
 .servicesItems {
   .col {
     height: 500px;
+    position: relative;
+    margin-bottom: 15px;
     a {
       cursor: pointer;
       img {
@@ -21,8 +23,6 @@ a.nostyle:visited {
       div {
         &.content {
           padding-left: 40px;
-          height: 160px;
-          overflow-y: hidden;
         }
         div:first-child {
           padding: 10px 5px 5px 0;
@@ -30,8 +30,10 @@ a.nostyle:visited {
           font-size: 24px;
           font-weight: 700;
         }
-        &:last-child {
+        &.serviceItemMoreButton {
           padding-top: 5px;
+          position: absolute;
+          top: 500px - 32px;
           span:first-child {
             font-size: 18px;
             font-weight: 700;
@@ -49,22 +51,25 @@ a.nostyle:visited {
           }
         }
       }
-      &:hover {
-        transition: all .3s ease;
+    }
+    &:hover {
+      transition: all .3s ease;
+      background-color: $blue;
+      a {
         div {
           transition: inherit;
-          background-color: $blue;
           div {
-            background-color: transparent;
             transition: inherit;
             &:first-child {
+              transition: inherit;
               color: $text-on-dark;
             }
             &:nth-child(2) {
+              transition: inherit;
               color: $text-blue-gray;
             }
           }
-          &:last-child {
+          &.serviceItemMoreButton {
             span:first-child {
               transition: inherit;
               color: $yellow;
