@@ -3,9 +3,12 @@
     .bgImage {
         display:block;
         height:280px;
-        background:center center no-repeat;
         position:absolute;
         width: 100%;
+        overflow: hidden;
+        img {
+            @include centre(both);
+        }
     }
     .container {
         padding-top: 186px;
