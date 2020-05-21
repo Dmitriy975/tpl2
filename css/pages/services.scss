@@ -14,7 +14,7 @@ a.nostyle:visited {
   flex: 1 0 auto;
   margin-bottom: 200px;
   .col {
-    height: 500px;
+    height: 540px;
     position: relative;
     margin-bottom: 15px;
     a > div {
@@ -24,7 +24,7 @@ a.nostyle:visited {
       }
       div {
         &.content {
-          padding-left: 40px;
+          padding: 0 15px 0 40px;
         }
         div:first-child {
           padding: 10px 5px 5px 0;
@@ -35,7 +35,7 @@ a.nostyle:visited {
         &.serviceItemMoreButton {
           padding-top: 5px;
           position: absolute;
-          top: 500px - 32px;
+          top: calc(100% - 72px);
           span:first-child {
             font-size: 18px;
             font-weight: 700;
