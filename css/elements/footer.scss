@@ -2,11 +2,7 @@ footer{
     background-color: $blue;
     color: $blue-light;
     .map {
-        background-color: $yellow;
-        color: $background;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
+        background: url(../img/demo-map.jpg) center center no-repeat;
         height: 436px;
     }
     .bottomLine {
