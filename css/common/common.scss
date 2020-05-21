@@ -116,6 +116,11 @@ a {
     .title {
         font-size: 30px;
         font-weight: bold;
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1;
+        }
     }
 }
 .simpleForm {
@@ -192,5 +197,53 @@ a {
             position:absolute;
             left: 10px;
         }
+    }
+}
+
+.tableCustom {
+    color: $text-on-white;
+    font-size: 14px;
+    width: 100%;
+    %last:last-child {
+        padding-left: 12px;
+        width: 228px;
+    }
+    thead {
+        font-size: 18px;
+        background-color: $table-custom-th-background;
+        th {
+            padding: 25px;
+            &:last-child {
+                @extend %last;
+            }
+        }
+    }
+    tr {
+        td {
+            padding: 15px 25px;
+            border-bottom: 1px solid $table-custom-th-background;
+            &:first-child {
+                border-right: 1px solid $table-custom-th-background;
+            }
+            &:last-child {
+                @extend %last;
+            }
+        }
+    }
+}
+/** Требует структуры <div><span></span><img /></div> */
+%adaptiveImage {
+    white-space: nowrap;
+    text-align: center;
+    span {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        max-height:100%;
+        vertical-align: middle;
     }
 }

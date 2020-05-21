@@ -1,0 +1,121 @@
+#servicePage {
+    #servicesMenu {
+        background-color: $service-menu-background;
+        padding: 30px 20px 30px 0px;
+        .simpleTitle {
+            margin-bottom: 20px;
+            padding-left: 35px;
+        }
+        ul {
+            padding-left: 40px;
+            list-style: none;
+            font-size: 18px;
+            color: #000;
+            line-height: 1.2;
+            li {
+                margin-bottom: 20px;
+                a {
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &.active {
+                    font-weight: bold;
+                    a {
+                        text-decoration: none;
+                        color: $blue;
+                    }
+                    &::before {
+                        content:'';
+                        display:block;
+                        width:14px;
+                        height:9px;
+                        background:get-icon('arrow-down', $blue, 14) center center no-repeat;
+                        position:absolute;
+                        transform: rotate(270deg);
+                        margin-left: -22px;
+                        margin-top: 7px;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    .userContent {
+        font-size: 18px;
+        color: $text-on-white;
+        ul {
+            @extend .ulCustom;
+            padding-left: 60px;
+            li {
+                margin-bottom: 27px;
+                &::before {
+                    left: 0;
+                    margin-top: -4px;
+                }
+            }
+            margin-bottom: 50px;
+        }
+    }
+    .yellowButton {
+        width: 235px;
+        float: right;
+        margin-top: 15px;
+        height: 55px;
+        margin-bottom: 50px;
+    }
+    .logos {
+        clear: both;
+        text-align: center;
+        margin-bottom: 85px;
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+            color: $blue;
+            margin-bottom: 40px;
+            &:hover {
+                text-decoration: none;
+            }
+            .img {
+                height: 80px;
+                @extend %adaptiveImage;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .reasons {
+        margin-bottom: 40px;
+        .simpleTitle {
+            width: 470px;
+        }
+
+        .service {
+            padding-bottom: 60px;
+            .icon {
+                .std {
+                    position: absolute;
+                    width: 92px;
+                    height: 92px;
+                    border: $blue 3px solid;
+                    background: $background;
+                    margin-top: 5px;
+                    padding: 12px;
+                    @extend %adaptiveImage;
+                }
+            }
+            .info {
+                padding-left: 120px;
+                .title {
+                    line-height: 1;
+                    padding-bottom: 12px;
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+                .text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

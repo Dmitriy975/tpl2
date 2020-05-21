@@ -12,6 +12,7 @@ a.nostyle:visited {
 
 .servicesItems {
   flex: 1 0 auto;
+  margin-bottom: 200px;
   .col {
     height: 500px;
     position: relative;
@@ -91,7 +92,7 @@ a.nostyle:visited {
 
 .servicesBottomBlock {
   position: relative;
-  margin: 200px 0 120px 0;
+  margin: 0px 0 120px 0;
   background: linear-gradient(to right, $background 50%, $blue 50%);
   flex: 1 0 auto;
   .container {

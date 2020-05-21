@@ -255,11 +255,6 @@
                 padding-bottom: 0px;
             }
             .icon {
-                .helper {
-                    display: inline-block;
-                    height: 100%;
-                    vertical-align: middle;
-                }
                 .std, .hover {
                     position: absolute;
                     width: 92px;
@@ -268,14 +263,7 @@
                     background: $blue;
                     margin-top: 5px;
                     padding: 12px;
-                    white-space: nowrap; /* This is required unless you put the helper span closely near the img */
-                    text-align: center;
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                        max-height:100%;
-                        vertical-align: middle;
-                    }
+                    @extend %adaptiveImage;
                 }
                 .hover {
                     visibility: hidden;

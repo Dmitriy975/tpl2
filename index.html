@@ -153,7 +153,7 @@
                         Наш автосервис в Туле
                     </div>
                     <div class="title">
-                        Профессиональный автосервис в Туле
+                        <h1>Профессиональный автосервис в Туле</h1>
                     </div>
                 </div>
                 <div class="text">
@@ -204,8 +204,8 @@
                                     phpthumbon будет подгонять размеры 100х100 в двух расцветках: синий, белый. 
                                     Остальное сделают стили
                                 -->
-                                <div class="std"><span class="helper"></span><img src="img/service-icon-1.png"/></div>
-                                <div class="hover"><span class="helper"></span><img src="img/service-icon-1-hover.png"/></div>
+                                <div class="std"><span></span><img src="img/service-icon-1.png"/></div>
+                                <div class="hover"><span></span><img src="img/service-icon-1-hover.png"/></div>
                             </div>
                         </a>
                         <div class="info">
@@ -219,8 +219,8 @@
                     <div class="service">
                         <a href="#">
                             <div class="icon">
-                                <div class="std"><span class="helper"></span><img src="img/service-icon-2.png"/></div>
-                                <div class="hover"><span class="helper"></span><img src="img/service-icon-2.png"/></div>
+                                <div class="std"><span></span><img src="img/service-icon-2.png"/></div>
+                                <div class="hover"><span></span><img src="img/service-icon-2.png"/></div>
                             </div>
                         </a>
                         <div class="info">
@@ -234,8 +234,8 @@
                     <div class="service">
                         <a href="#">
                             <div class="icon">
-                                <div class="std"><img src="img/service-icon-3.png"/></div>
-                                <div class="hover"><img src="img/service-icon-3.png"/></div>
+                                <div class="std"><span></span><img src="img/service-icon-3.png"/></div>
+                                <div class="hover"><span></span><img src="img/service-icon-3.png"/></div>
                             </div>
                         </a>
                         <div class="info">
@@ -249,8 +249,8 @@
                     <div class="service">
                         <a href="#">
                             <div class="icon">
-                                <div class="std"><img src="img/service-icon-4.png"/></div>
-                                <div class="hover"><img src="img/service-icon-4.png"/></div>
+                                <div class="std"><span></span><img src="img/service-icon-4.png"/></div>
+                                <div class="hover"><span></span><img src="img/service-icon-4.png"/></div>
                             </div>
                         </a>
                         <div class="info">
@@ -264,8 +264,8 @@
                     <div class="service">
                         <a href="#">
                             <div class="icon">
-                                <div class="std"><img src="img/service-icon-5.png"/></div>
-                                <div class="hover"><img src="img/service-icon-5.png"/></div>
+                                <div class="std"><span></span><img src="img/service-icon-5.png"/></div>
+                                <div class="hover"><span></span><img src="img/service-icon-5.png"/></div>
                             </div>
                         </a>
                         <div class="info">
@@ -279,8 +279,8 @@
                     <div class="service">
                         <a href="#">
                             <div class="icon">
-                                <div class="std"><span class="helper"></span><img src="img/service-icon-6.png"/></div>
-                                <div class="hover"><span class="helper"></span><img src="img/service-icon-6.png"/></div>
+                                <div class="std"><span></span><img src="img/service-icon-6.png"/></div>
+                                <div class="hover"><span></span><img src="img/service-icon-6.png"/></div>
                             </div>
                         </a>
                         <div class="info">
@@ -588,7 +588,7 @@
                 $("#mainGalery").html(blocksInitArray);
             }
             $("#mainGalery .item.end").outerHeight(100);
-            var heightFull = $("#mainGalery").outerHeight();
+            var heightFull = $("#mainGalery").outerHeight() + 1;
             var blocks = $("#mainGalery .item");
             var last = $(blocks[blocks.length - 1]);
             var rHeightTmp = 0;
@@ -597,14 +597,14 @@
                 return $(blocks[index]).outerHeight() + 25;
             }
             for (var i = blocks.length - 1; i >= 0;  i--) {
-                if (getBlockHeight(i) + rHeightTmp > heightFull) {
-                    lHeightTmp += getBlockHeight(i);
-                } else {
+                if (getBlockHeight(i) + rHeightTmp <= heightFull && lHeightTmp == 0) {
                     rHeightTmp += getBlockHeight(i);
+                } else {
+                    lHeightTmp += getBlockHeight(i);
                 }
             }
             if (rHeightTmp > lHeightTmp) {
-                // var randomBlock = Math.floor(Math.random() * Math.floor(blocks.length - 2)) + 1;
+                // var removeIndex = Math.floor(Math.random() * Math.floor(blocks.length - 2)) + 1;
                 var removeIndex = 1;
                 if (iter > 5 && blocks.length >= 3) {
                     removeIndex = iter % 2 ? 2 : 1;
@@ -620,7 +620,8 @@
                 }
                 return;
             }
-            last.outerHeight(heightFull - (rHeightTmp - last.outerHeight()));
+            var ieFix = lHeightTmp > heightFull ? 25 : 0;
+            last.outerHeight(heightFull - (rHeightTmp - last.outerHeight()) - 1 + ieFix);
         }
     </script>
 </body>
