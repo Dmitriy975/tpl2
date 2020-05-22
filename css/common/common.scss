@@ -82,6 +82,8 @@ a {
     }
 }
 .yellowButton {
+    border: none;
+    outline : none;
     display: inline-flex;
     align-items: center;
     width: 100%;
@@ -98,6 +100,9 @@ a {
     border-radius:3px;
     &:hover {
         background-color: $yellow-hover;
+    }
+    &:focus {
+        outline: none;
     }
     line-height: 1;
 }
@@ -245,6 +250,32 @@ a {
         height: auto;
         max-height:100%;
         vertical-align: middle;
+    }
+}
+#callMeModal .modal-dialog {
+    width: 400px;
+    input {
+        font-size: 18px;
+    }
+    .modal-body {
+        padding-bottom: 0;
+    }
+    .input-wrapper:last-child {
+        margin-bottom: -1px;
+    }
+}
+.modal-dialog .modal-content {
+    .modal-header {
+        background-color: $blue;
+        color: $text-on-dark;
+        .close {
+            color: $yellow;
+            opacity: .8;
+            text-shadow: 0 1px 0 $yellow-hover;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }
 
