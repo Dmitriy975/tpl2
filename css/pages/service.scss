@@ -119,6 +119,11 @@
         }
     }
 }
+@media (min-width: 992px) {
+    #servicePage #servicesMenu ul {
+        display: block !important;
+    }
+}
 @media (max-width: 992px - 0.01px) {
     .tableCustom thead th:last-child, .tableCustom tr td:last-child {
         width: auto;

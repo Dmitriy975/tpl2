@@ -108,6 +108,10 @@ function initMobileMenu() {
     });
 
     $("#servicesMenu .simpleTitle").click(function () {
+        let mql = window.matchMedia('(max-width: 991.98px)');
+        if (!mql.matches) {
+            return;
+        }
         var subMenu = $(this).parent().find("ul");
         if ($(this).hasClass("opened")) {
             subMenu.slideToggle(500);

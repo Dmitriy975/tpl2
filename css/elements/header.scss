@@ -168,6 +168,12 @@ header {
     }
 }
 
+@media (min-width: 768px) {
+    header .bottomLine .menu nav ul li .subMenu {
+        display: block !important;
+    }
+}
+
 @media (max-width: 768px - 0.01px) {
     header {
         .bottomLine {
