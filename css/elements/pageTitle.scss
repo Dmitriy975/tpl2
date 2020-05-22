@@ -32,3 +32,40 @@
         }
     }
 }
+
+@media (max-width: 992px - 0.01px) {
+    #pageTitle .container {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        .mx-auto {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (max-width: 768px - 0.01px) {
+    #pageTitle .container .mx-auto {
+        margin-bottom: 70px;
+        width: unset;
+        max-width: 450px;
+        .title, .title h1 {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+    }
+
+}
+
+@media (max-width: 520px - 0.01px) {
+    #pageTitle .container .mx-auto {
+        .title, .title h1 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+        .breadCrumbs a {
+            font-size: 13px;
+        }
+    }
+}

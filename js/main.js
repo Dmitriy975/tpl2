@@ -16,7 +16,15 @@ $(document).ready(function() {
     }
     initAutoResizeTextArea();
     initAboutSliders();
+    initMasks();
 });
+
+/**
+ * Инициализирует маски на поля
+ */
+function initMasks() {
+    $(".phoneInput").mask('+7(999) 999-99-99');
+}
 
 /**
  * Инициализация слайдеров на странице о компании
