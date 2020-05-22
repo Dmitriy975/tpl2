@@ -106,6 +106,17 @@ function initMobileMenu() {
             $(this).addClass("opened");
         }
     });
+
+    $("#servicesMenu .simpleTitle").click(function () {
+        var subMenu = $(this).parent().find("ul");
+        if ($(this).hasClass("opened")) {
+            subMenu.slideToggle(500);
+            $(this).removeClass("opened");
+        } else {
+            subMenu.slideToggle(500);
+            $(this).addClass("opened");
+        }
+    });
 }
 
 /**

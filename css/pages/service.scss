@@ -119,3 +119,67 @@
         }
     }
 }
+@media (max-width: 992px - 0.01px) {
+    .tableCustom thead th:last-child, .tableCustom tr td:last-child {
+        width: auto;
+    }
+    #servicesMenu {
+        .simpleTitle {
+            margin-bottom: 0 !important;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            &::before {
+                content:'';
+                display:block;
+                width:20px;
+                height:14px;
+                background:get-icon('arrow-down', black, 20) center center no-repeat;
+                position:absolute;
+                transform: rotate(270deg);
+                margin-top: 11px;
+                color: $blue;
+                right: -26px;
+                transition:transform .3s ease
+            }
+            &.opened::before {
+                transform: rotate(360deg);
+            }
+        }
+        ul {
+            display: none;
+            margin-top: 20px;
+        }
+    }
+    #servicePage #servicesMenu ul li.active::before {
+        display: none;
+    }
+}
+@media (max-width: 768px - 0.01px) and (min-width: 576px) {
+    #servicePage .logos {
+        margin-bottom: 40px;
+    }
+    #contacntsPage {
+        padding-bottom: 70px;
+    }
+    #servicePage .reasons .service .icon .std {
+        width: 70px;
+        height: 70px;
+        padding: 6px;
+    }
+    #servicePage .reasons .service .info {
+        padding-left: 85px;
+    }
+    #servicePage .reasons .service .info .title {
+        font-size: 20px;
+        margin-top: 3px;
+    }
+}
+@media (max-width: 576px - 0.01px) {
+    #servicePage .logos {
+        margin-bottom: 40px;
+    }
+    #servicePage .reasons .simpleTitle {
+        width: auto;
+    }
+}

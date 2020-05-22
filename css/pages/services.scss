@@ -158,3 +158,29 @@ a.nostyle:visited {
   }
 
 }
+
+@media (max-width: 768px - 0.01px) {
+  .reasons {
+    margin-bottom: 0 !important;
+  }
+  .servicesBottomBlock {
+    background: $blue;
+    margin-bottom: 0;
+    .servicesBottomContent {
+      padding-left: 20px !important;
+    }
+    .container {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      .simpleTitle {
+        margin-bottom: 30px !important;
+      }
+      .serviceContentPhoneText {
+        margin-top: 30px !important;
+      }
+      .yellowButton {
+        margin-top: 30px;
+      }
+    }
+  }
+}

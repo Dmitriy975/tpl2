@@ -60,7 +60,7 @@ header {
                         top:50%;
                         margin-top:-3px;
                         right:8px;
-                        transition:transform .3s ease
+                        transition:transform .3s ease;
                     }
                     &.parent:hover::after {
                         transform: rotate(180deg);
@@ -207,6 +207,7 @@ header {
                                 padding-left: 7px;
                                 font-size: 24px;
                                 position: relative;
+                                cursor: pointer;
                                 &::before {
                                     content: '';
                                     position: absolute;
@@ -217,9 +218,10 @@ header {
                                     transform: rotate(270deg);
                                     right: -10px;
                                     margin-top: 8px;
+                                    transition:transform .3s ease
                                 }
                                 &.opened::before {
-                                    transform: rotate(0deg);
+                                    transform: rotate(360deg);
                                 }
                             }
                             &.active {
@@ -257,7 +259,6 @@ header {
                         }
                     }
                 }
-                // TODO стили для меню
             }
             .float-left {
                 @include centre(y);
@@ -266,7 +267,6 @@ header {
                 float: right;
                 color: $blue !important;
                 width: 240px;
-                // margin-top: 10px;
                 @include centre(y);
                 a {
                     color: $blue !important;
@@ -289,6 +289,7 @@ header {
                 width: 30px;
                 height: 30px;
                 background: get-icon('menu', $yellow, 30) center center no-repeat;
+                cursor: pointer;
             }
             .soc {
                 text-align: center;
