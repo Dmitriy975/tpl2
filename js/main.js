@@ -75,6 +75,9 @@ function initMainSlider() {
  */
 function initMobileMenu() {
     $(".i-menu").click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
         var menu = $("header .menu");
         if (menu.hasClass("opened")) {
             menu.stop().animate({top:"-100%"}, 500);
