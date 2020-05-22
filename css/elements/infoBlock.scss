@@ -24,3 +24,16 @@
         color: $text-on-white;
     }
 }
+@media (max-width: 992px - 0.01px) {
+    .infoBlock .images {
+        .back, .front {
+            width:85%;
+        }
+    }
+    .infoBlock .info {
+        padding-left: 20px;
+    }
+    .infoBlock {
+        margin-bottom: 70px;
+    }
+  }

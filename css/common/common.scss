@@ -279,7 +279,16 @@ a {
     }
 }
 
+@media (max-width: 992px - 0.01px) {
+    .ulCustom li {
+        margin-top: 30px !important;
+    }
+}
+
 @media (max-width: 576px - 0.01px) {
+    .ulCustom li {
+        margin-top: 20px !important;
+    }
     .container {
         min-width: 360px;
         padding-left:15px !important;
