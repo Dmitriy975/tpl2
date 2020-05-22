@@ -247,3 +247,11 @@ a {
         vertical-align: middle;
     }
 }
+
+@media (max-width: 576px - 0.01px) {
+    .container {
+        min-width: 360px;
+        padding-left:15px !important;
+        padding-right:15px !important;
+    }
+}
