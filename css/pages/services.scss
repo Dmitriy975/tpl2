@@ -46,7 +46,7 @@ a.nostyle:visited {
             display: inline-block;
             height: 16px;
             width: 16px;
-            background: get-icon('arrow-down', $blue, 16) center center no-repeat;
+            background: get-icon('arrow-down', $blue-svg, 16) center center no-repeat;
             transform: rotate(-90deg);
           }
         }
@@ -79,7 +79,7 @@ a.nostyle:visited {
             }
             span.iconRight {
               transition: inherit;
-              background: get-icon('arrow-down', $yellow, 16) center center no-repeat;
+              background: get-icon('arrow-down', $yellow-svg, 16) center center no-repeat;
             }
           }
         }

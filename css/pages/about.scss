@@ -46,11 +46,11 @@
                 width: 56px;
                 height: 56px;
                 border: 3px solid $text-on-dark;
-                background: get-icon('arrow-down', $text-on-dark, 10) center center no-repeat;
+                background: get-icon('arrow-down', $text-on-dark-svg, 10) center center no-repeat;
                 &:hover {
                     transition: all 0.3s ease;
                     border: 3px solid $yellow;
-                    background: get-icon('arrow-down', $yellow, 10) center center no-repeat;
+                    background: get-icon('arrow-down', $yellow-svg, 10) center center no-repeat;
                 }
                 &.slickLeft {
                     transform: rotate(90deg);
@@ -169,9 +169,9 @@
                                 display: inline-block;
                                 width: 16px;
                                 height: 16px;
-                                background: get-icon('star', $gray, 16) center center no-repeat;
+                                background: get-icon('star', $gray-svg, 16) center center no-repeat;
                                 &.filled {
-                                    background: get-icon('star', $yellow, 16) center center no-repeat;
+                                    background: get-icon('star', $yellow-svg, 16) center center no-repeat;
                                 }
                             }
                         }

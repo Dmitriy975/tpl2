@@ -31,7 +31,7 @@
                         display:block;
                         width:14px;
                         height:9px;
-                        background:get-icon('arrow-down', $blue, 14) center center no-repeat;
+                        background:get-icon('arrow-down', $blue-svg, 14) center center no-repeat;
                         position:absolute;
                         transform: rotate(270deg);
                         margin-left: -22px;
@@ -139,7 +139,7 @@
                 display:block;
                 width:20px;
                 height:14px;
-                background:get-icon('arrow-down', black, 20) center center no-repeat;
+                background:get-icon('arrow-down', black-svg, 20) center center no-repeat;
                 position:absolute;
                 transform: rotate(270deg);
                 margin-top: 11px;

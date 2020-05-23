@@ -243,7 +243,7 @@
                     &:before {
                         display: block;
                         content: '';
-                        background:get-icon('arrow-down', $yellow, 18) center center no-repeat;
+                        background:get-icon('arrow-down', $yellow-svg, 18) center center no-repeat;
                         width: 18px;
                         height: 14px;
                         transform: rotate(270deg);
@@ -417,7 +417,7 @@
                 }
                 &:after {
                     display: inline-block;
-                    content: get-icon('arrow-down', $text-on-dark, 17);
+                    content: get-icon('arrow-down', $text-on-dark-svg, 17);
                     transform: rotate(270deg);
                     margin-left: 14px;
                     width: 17px;
@@ -495,7 +495,7 @@
                 display: inline-block;
                 height: 16px;
                 width: 16px;
-                background: get-icon('arrow-down', $blue, 16) center center no-repeat;
+                background: get-icon('arrow-down', $blue-svg, 16) center center no-repeat;
                 transform: rotate(-90deg);
             }
         }

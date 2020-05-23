@@ -55,7 +55,7 @@ header {
                         display:block;
                         width:14px;
                         height:9px;
-                        background:get-icon('arrow-down', $blue, 14) center center no-repeat;
+                        background:get-icon('arrow-down', $blue-svg, 14) center center no-repeat;
                         position:absolute;
                         top:50%;
                         margin-top:-3px;
@@ -220,7 +220,7 @@ header {
                                     display: block;
                                     width:17px;
                                     height:11px;
-                                    background:get-icon('arrow-down', $blue, 17) center center no-repeat;
+                                    background:get-icon('arrow-down', $blue-svg, 17) center center no-repeat;
                                     transform: rotate(270deg);
                                     right: -10px;
                                     margin-top: 8px;
@@ -294,7 +294,7 @@ header {
             .i-menu {
                 width: 30px;
                 height: 30px;
-                background: get-icon('menu', $yellow, 30) center center no-repeat;
+                background: get-icon('menu', $yellow-svg, 30) center center no-repeat;
                 cursor: pointer;
             }
             .soc {
