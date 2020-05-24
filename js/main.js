@@ -44,7 +44,16 @@ function initAboutSliders() {
         arrows: false,
         dots: true,
         appendDots: $('.reviewsDots'),
-        dotsClass: 'reviewsDotsClass'
+        dotsClass: 'reviewsDotsClass',
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+        ]
     });
 }
 
