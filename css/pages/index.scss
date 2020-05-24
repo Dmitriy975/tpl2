@@ -336,7 +336,8 @@
     column-gap: 25px;
     margin-bottom: 40px;
     flex: 1 0 auto;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     .item {
         display: inline-block;
         position: relative;

@@ -7,17 +7,31 @@ $(document).ready(function() {
     /** Выполняем только если есть галерея */
     if ($("#mainGalery").has()) {
         blocksInitArray = $("#mainGalery .item");
-        setupBlocks();
-        $(window).resize(function() {
+        if ($("#mainGalery .end").length) {
             setupBlocks();
-            initGalleryAnimate();
-        });
+            $(window).resize(function() {
+                setupBlocks();
+                initGalleryAnimate();
+            });
+        }
         initGalleryAnimate();
     }
     initAutoResizeTextArea();
     initAboutSliders();
     initMasks();
+    initLightbox();
 });
+
+function initLightbox() {
+    if (!lightbox) {
+        return;
+    }
+    lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true,
+          'albumLabel': "Изображение %1 из %2"
+    })
+}
 
 /**
  * Инициализирует маски на поля
