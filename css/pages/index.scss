@@ -448,7 +448,9 @@
 #newsTitle {
     padding-top: 64px;
 }
-
+.newsItemsParent {
+    flex: 1 0 auto;
+}
 .newsItems {
     div.col {
         margin-bottom: 115px;

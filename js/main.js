@@ -23,7 +23,7 @@ $(document).ready(function() {
 });
 
 function initLightbox() {
-    if (!lightbox) {
+    if (typeof lightbox === 'undefined') {
         return;
     }
     lightbox.option({
