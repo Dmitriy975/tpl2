@@ -1,15 +1,26 @@
 .date {
   font-size: 24px;
+  span {
+    margin: 0 20px;
+  }
 }
 #newBlock {
   font-size: 18px;
   margin-bottom: 115px;
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
   img {
-    float: right;
-    margin: 0 auto;
+    margin: 0 20px 20px 20px;
+    width: 50%
   }
+}
+@media (max-width: 768px - 0.01px) {
+    #newBlock {
+        .simpleTitle {
+          margin-bottom: 25px;
+        }
+        .float-right {
+            float: none !important;
+            margin: 0 0 20px 0;
+            width: 100%;
+        }
+    }
 }
