@@ -196,6 +196,7 @@
         }
         .bgImageWrapper {
             position: relative;
+            min-height: 200px;
             .bgImage,  &:after {
                 content: '';
                 display: block;
@@ -291,7 +292,7 @@
         .callMe {
             width: 670px;
             position: absolute;
-            bottom: -125px;
+            margin-top: 100px;
             left: -55px;
             padding: 50px 70px 60px 70px;
             background-color: $background;
@@ -450,13 +451,15 @@
 .newsItems {
     margin-bottom: 85px;
     div.col {
-        height: 750px;
         position: relative;
         margin-bottom: 45px;
         > img {
             width: 100%;
         }
         div.content {
+            span {
+                margin: 0 15px;
+            }
             div:first-child {
                 color: $blue;
                 font-size: 18px;
@@ -476,7 +479,7 @@
         div.newsItemMoreButton {
             padding-top: 5px;
             position: absolute;
-            top: 750px - 32px;
+            bottom: -45px;
             a {
                 text-decoration: underline;
                 &:hover {
@@ -536,5 +539,176 @@
         -webkit-transform:perspective(800px);
         transform:perspective(800px);
         opacity:1;
+    }
+}
+@media (max-width: 1200px - 0.01px) {
+    #mainSlider {
+        .slide .container {
+            .simpleTitle {
+                padding-left: 50px;
+                &.text-1 {
+                    font-size: 46px;
+                }
+                &.text-2, &.text-3 {
+                    font-size: 28px;
+                }
+            }
+            .yellowButton {
+                margin-left: 50px;
+            }
+        }
+    }
+    #mainServices {
+        .rightBlock .callMe {
+            left: -184px;
+        }
+    }
+    #mainGalery {
+        .simpleTitle {
+            margin-bottom: 30px;
+        }
+        .item.start .text {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 992px - 0.01px) {
+    #mainSlider {
+        margin-bottom: 100px;
+        .slide .container {
+            .simpleTitle {
+                padding-left: 40px;
+                &.text-1 {
+                    font-size: 42px;
+                }
+                &.text-2, &.text-3 {
+                    font-size: 26px;
+                }
+            }
+            .yellowButton {
+                margin-left: 40px;
+            }
+        }
+    }
+    .infoBlock .simpleTitle{
+        margin-bottom: 25px;
+    }
+
+    #mainServices {
+        padding-top: 60px;
+        .rightBlock {
+            padding-left: 15px;
+            padding-bottom: 150px;
+            .callMe {
+                font-size: 16px;
+                left: unset;
+                width: 100%;
+                padding: 30px 70px 40px 70px;
+                margin-top: 70px;
+            }
+        }
+        .leftBlock {
+            .simpleTitle {
+                margin-bottom: 20px;
+                padding-left: 30px;
+            }
+            .text {
+                padding-bottom: 50px;
+            }
+        }
+    }
+    #contact {
+        > div.row {
+            padding-bottom: 20px;
+            > div {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    #newsTitle {
+        .simpleTitle {
+            margin-bottom: 30px;
+        }
+    }
+    .newsItems div.col div.content div:first-child {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 768px - 0.01px) {
+    #mainSlider {
+        margin-bottom: 80px;
+        .slide .container {
+            .simpleTitle {
+                padding-left: 30px;
+                &.text-1 {
+                    font-size: 38px;
+                }
+            }
+            .yellowButton {
+                margin-left: 30px;
+            }
+        }
+        .slick-dots li {
+            margin: 0 30px;
+        }
+    }
+    #mainServices {
+        .rightBlock {
+            .callMe {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    #mainGalery {
+        columns: 1 auto;
+    }
+    .newsItems {
+        margin-bottom: 0;
+        div.col {
+            margin-bottom: 90px;
+        }
+    }
+}
+
+
+@media (max-width: 576px - 0.01px) {
+    #mainSlider {
+        margin-bottom: 60px;
+        .slide .container {
+            .simpleTitle {
+                padding-left: 20px;
+                &.text-1 {
+                    font-size: 32px;
+                }
+                &.text-2, &.text-3 {
+                    font-size: 24px;
+                }
+            }
+            .yellowButton {
+                margin-left: 20px;
+            }
+        }
+        .slick-dots li {
+            margin: 0 20px;
+        }
+    }
+    #mainServices {
+        .rightBlock {
+            .callMe {
+                .button .yellowButton {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    #mainGalery {
+        margin-bottom: 0px;
+    }
+    #contact {
+        font-size: 20px;
+        line-height: 1.2;
     }
 }

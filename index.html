@@ -150,13 +150,13 @@
     </div>
     <div class="infoBlock container">
         <div class="row">
-            <div class="col-6 images">
+            <div class="col-6 col-lg-6 col-md-5 images d-md-block d-none">
                 <div>
                     <img class="back" src="img/info-1.jpg"/>
                     <img class="front" src="img/info-2.jpg"/>
                 </div>
             </div>
-            <div class="col-6 info">
+            <div class="col-12 col-lg-6 col-md-7 info">
                 <div class="simpleTitle">
                     <div class="subTitle">
                         Наш автосервис в Туле
@@ -180,8 +180,8 @@
     </div>
     <div id="mainServices">
         <div class="container">
-            <div class="row">
-                <div class="col-6 leftBlock">
+            <div class="row row-cols-lg-2 row-cols-1">
+                <div class="col leftBlock">
                     <div class="d-flex flex-column h-100">
                         <div class="info">
                             <div class="simpleTitle">
@@ -197,14 +197,16 @@
                                 определяет мастер после проведения осмотра ТС. В рамках профилактического технического 
                             </div>
                         </div>
-                        <div class="bgImageWrapper h-100 flex-grow-1">
-                            <div class="bgImage">
-                                <img src="img/service-bg.jpg">
-                            </div>
+                        <div class="bgImageWrapper h-100 flex-grow-1 d-lg-block d-none">
+                            <!--
+                                Нужно написать в админке что картинка должна быть очень высокой, если контента много
+                                И ширина 1000px
+                            -->
+                            <div class="bgImage" style="background-image: url(img/service-bg.jpg)"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 rightBlock">
+                <div class="col rightBlock">
                     <div class="service">
                         <a href="#">
                             <div class="icon">
@@ -306,11 +308,11 @@
                         </div>
                     </div>
                     <div class="callMe row">
-                        <div class="col-7">
+                        <div class="col-sm-7 col-12">
                             Вы можете заказать любую интересующую вас услуги
                             <br/><a href="tel:+74872522229">+7 (4872) 52-22-29</a>
                         </div>
-                        <div class="col-5 button">
+                        <div class="col-sm-5 col-12 button">
                             <div class="yellowButton" data-toggle="modal" data-target="#callMeModal">Заказать звонок</div>
                         </div>
                     </div>
@@ -386,13 +388,13 @@
 
     <div id="contact" class="container">
         <div class="row">
-            <div class="col-7">
+            <div class="col-xl-7 col-lg-6 col-12">
                 Вы можете заказать любую интересующую вас услуги
             </div>
-            <div class="col align-content-center">
+            <div class="col-12 col-sm align-content-center align-self-center">
                 <b><a href="tel:+74872522229">+7 (4872) 52-22-29</a></b>
             </div>
-            <div class="col button">
+            <div class="col-12 col-sm button align-self-center">
                 <div class="yellowButton" data-toggle="modal" data-target="#callMeModal">Заказать звонок</div>
             </div>
         </div>
@@ -410,11 +412,11 @@
     </div>
 
     <div class="container">
-        <div class="newsItems row row-cols-sm-2">
+        <div class="newsItems row row-cols-md-2 row-cols-1">
             <div class="col">
                 <img src="img/service1.jpg"/>
                 <div class="content">
-                    <div>12&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;апреля&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;2020</div>
+                    <div>12<span>/</span>апреля<span>/</span>2020</div>
                     <div>Заголовок статьи</div>
                     <div>
                         Перечень работ, которые нужно выполнить для комфортной и безопасной эксплуатации машины,
@@ -427,7 +429,7 @@
             <div class="col">
                 <img src="img/service2.jpg"/>
                 <div class="content">
-                    <div>12&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;апреля&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;2020</div>
+                    <div>12<span>/</span>апреля<span>/</span>2020</div>
                     <div>Заголовок статьи</div>
                     <div>
                         Перечень работ, которые нужно выполнить для комфортной и безопасной эксплуатации машины,
@@ -436,37 +438,6 @@
                     </div>
                 </div>
                 <div class="newsItemMoreButton"><a href="#"><span>Подробнее</span><span class="iconRight"></span></a></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="infoBlock container">
-        <div class="row">
-            <div class="col-6 images">
-                <div>
-                    <img class="back" src="img/info-1.jpg"/>
-                    <img class="front" src="img/info-2.jpg"/>
-                </div>
-            </div>
-            <div class="col-6 info">
-                <div class="simpleTitle">
-                    <div class="subTitle">
-                        Наш автосервис в Туле
-                    </div>
-                    <div class="title">
-                        Профессиональный автосервис в Туле
-                    </div>
-                </div>
-                <div class="text">
-                    Перечень работ, которые нужно выполнить для комфортной и безопасной эксплуатации машины,
-                    определяет мастер после проведения осмотра ТС. В рамках профилактического технического
-                    обслуживания проводятся регламентные работы, которые обеспечивают эффективное функционирование
-                    всех агрегатов и продляют срок их эксплуатации.
-                </div>
-                <ul class="ulCustom">
-                    <li>Техническое обслуживание транспортных средств разных производителей и комплектаций.</li>
-                    <li>Комплексная диагностика, диагностика отдельных механизмов и узлов ТС.</li>
-                </ul>
             </div>
         </div>
     </div>
